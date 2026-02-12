@@ -1,0 +1,10 @@
+torch>=2.0.0
+pytorch-lightning
+massspecgym
+rdkit
+huggingface_hub
+pandas
+numpy
+matplotlib
+scikit-learn
+tqdm
