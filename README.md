@@ -94,6 +94,7 @@ The checkpoints (.ckpt) are hosted on Hugging Face.
    # Load weights
    checkpoint = torch.load(checkpoint_path, map_location="cpu")
    # model.load_state_dict(checkpoint["state_dict"])
+```
 
 
 ## 🛠️ Requirements
