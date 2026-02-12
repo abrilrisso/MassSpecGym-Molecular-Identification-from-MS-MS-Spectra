@@ -74,27 +74,27 @@ All model checkpoints are hosted on **Hugging Face Hub**. Each model includes it
    ```bash
    git clone [https://github.com/abrilrisso/MassSpecGym-Molecular-Identification-from-MS-MS-Spectra.git](https://github.com/abrilrisso/MassSpecGym-Molecular-Identification-from-MS-MS-Spectra.git)
    cd MassSpecGym-Molecular-Identification-from-MS-MS-Spectra
-   ´´´
+   
 2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
-   ´´´
+   
 🧠 **Loading Pretrained Models**
 The checkpoints (.ckpt) are hosted on Hugging Face.
 
 **Example: Loading The Ranker**
-``python
-from huggingface_hub import hf_hub_download
-import torch
+   ```bash
+   from huggingface_hub import hf_hub_download
+   import torch
+   
+   # Download from Hugging Face
+   repo_id = "abrilrisso/massspecgym-ranker-infonce"
+   checkpoint_path = hf_hub_download(repo_id=repo_id, filename="best_model_ranker.ckpt")
+   
+   # Load weights
+   checkpoint = torch.load(checkpoint_path, map_location="cpu")
+   # model.load_state_dict(checkpoint["state_dict"])
 
-# Download from Hugging Face
-repo_id = "abrilrisso/massspecgym-ranker-infonce"
-checkpoint_path = hf_hub_download(repo_id=repo_id, filename="best_model_ranker.ckpt")
-
-# Load weights
-checkpoint = torch.load(checkpoint_path, map_location="cpu")
-# model.load_state_dict(checkpoint["state_dict"])
-´´´
 
 ## 🛠️ Requirements
 * Python 3.11+
