@@ -52,6 +52,16 @@ My models demonstrate strong competitive performance, consistently outperforming
 
 *Note: While De Novo exact matching is an extreme challenge (0.0% accuracy), our model achieved a **Top-1 Tanimoto Similarity of 0.108**, proving that the model learns relevant structural patterns and outperforms standard baselines.*
 
+## 📦 Model Zoo (Pretrained Weights)
+
+All model checkpoints are hosted on **Hugging Face Hub**. Each model includes its specific configuration and evaluation metrics.
+
+| Model Component | Objective | Metrics | Hugging Face Link |
+| :--- | :--- | :--- | :--- |
+| **The Ranker** | Candidate Ranking | Hit@20: 42.0% | [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Ranker-yellow)](https://huggingface.co/abrilrisso/massspecgym-ranker-infonce) |
+| **The Reconstructor** | Substructure Prediction | F1: 0.283 | [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Reconstructor-yellow)](https://huggingface.co/abrilrisso/massspecgym-reconstructor-focal) |
+| **De Novo Decoder** | SMILES Generation | Tanimoto: 0.108 | [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-DeNovo-yellow)](https://huggingface.co/abrilrisso/massspecgym-denovo-decoder) |
+
 ## 📁 Repository Structure
 * `retrieval_notebook.ipynb`: Data preprocessing, Transformer training with InfoNCE/Focal Loss, and retrieval evaluation.
 * `de_novo_notebook.ipynb`: Implementation of the Seq2Seq Transformer, SMILES tokenization, and Beam Search inference.
@@ -62,6 +72,7 @@ My models demonstrate strong competitive performance, consistently outperforming
 * PyTorch
 * RDKit (for molecular fingerprinting and SMILES validation)
 * Pandas, NumPy, Matplotlib
+   
 
 ---
 **Author:** Abril Risso Matas  
